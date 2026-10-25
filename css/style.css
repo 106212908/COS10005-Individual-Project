@@ -1,0 +1,391 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    background-color: #f8f6f0;
+    color: #333333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #294b37;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Header and Navigation Styling */
+header {
+    background-color: white;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 50px;
+}
+
+nav a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #365c45;
+}
+
+nav a.active:hover {
+    color: #365c45;
+    text-decoration: underline;
+}
+
+
+/* Page Intro Styling */
+#page-intro {
+    background-color: #e7eadd;
+    padding: 60px 8%;
+    text-align: center;
+}
+
+#page-intro h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#page-intro p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    font-size: 18px;
+}
+
+#page-intro img {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 12px;
+}
+
+#page-intro a {
+    display: inline-block;
+    background-color: #365c45;
+    color: white;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+#page-intro a:hover {
+    background-color: #294b37;
+}
+
+
+/* Services Styling */
+#services {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#services article {
+    display: inline-block;
+    vertical-align: top;
+    width: 28%;
+    margin: 1%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* Box Shadow Shallowness */
+}
+
+#services article h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+#services p {
+    font-size: 17px;
+}
+
+/* Footer */
+footer {
+    background-color: #294b37;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Restaurant Styling */
+
+.restaurant-list {
+    padding: 25px 5%;
+}
+
+.restaurant-list h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* Restaurant Card Layout */
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Individual Restaurant Cards */
+.restaurant-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.restaurant-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.restaurant-card p {
+    font-size: 17px;
+}
+
+.restaurant-card ul {
+    padding-left: 20px;
+}
+
+/* Shared button styling */
+.button {
+    display: inline-block;
+    background-color: #365c45;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* To ensure the Reserve Now button aligns*/
+.restaurant-card .button {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* Recommendation Page Styling */
+.recommendation-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.recommendation-section h2 {
+    color: #294b37;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Recommendation Form Styling */
+#recommendation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #e7eadd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#recommendation-form label {
+    font-weight: bold;
+    color: #333333;
+    font-size: 18px;
+}
+
+#recommendation-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Recommendation Button Styling */
+#recommendation-form button {
+    padding: 10px;
+    background-color: #365c45;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+#recommendation-form button:hover {
+    background-color: #294b37;
+}
+
+/* Recommendation Results */
+#recommendation-result {
+    margin-top: 30px;
+}
+
+.recommendation-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.recommendation-card h3 {
+    color: #294b37;
+    margin-top: 0;
+}
+
+.recommendation-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #365c45;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.recommendation-card a:hover {
+    background-color: #294b37;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet layout */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #page-intro h2 {
+        font-size: 30px;
+    }
+
+    #services article {
+        width: 45%;
+    }
+
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+
+/* Mobile layout */
+@media screen and (max-width: 767px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #page-intro {
+        padding: 35px 5%;
+    }
+
+    #page-intro h2 {
+        font-size: 26px;
+    }
+
+    #page-intro a {
+        display: block;
+        margin: 10px auto;
+        max-width: 250px;
+    }
+
+    #services {
+        padding: 50px 5%;
+    }
+
+    #services article {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .restaurant-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .restaurant-list {
+        padding: 25px 10%;
+    }
+
+    .recommendation-section {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    #recommendation-form {
+        padding: 15px;
+    }
+
+    .recommendation-card {
+        padding: 15px;
+    }
+}
+
+
+

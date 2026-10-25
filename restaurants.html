@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DineFinder | Restaurants</title>
+    <!-- Link CSS and JS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <h1>DineFinder</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="restaurants.html" class="active">Restaurants</a></li>
+                <li><a href="recommend.html">Recommendations</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Introduction Section -->
+        <section id="page-intro">
+            <h2>Explore Our Restaurant</h2>
+            <p>
+                Discover a variety of restaurants offering different<br>
+                cuisines, dining experiences, and prices. Browse our<br>
+                latest restaurant selection and find the next perfect<br>
+                place for your next meal.
+            </p>
+        </section>
+
+        <!-- Restaurant List Card -->
+        <section class="restaurant-list">
+            <h2>Available Restaurants</h2>
+
+            <!-- CSS Grid -->
+            <div class="restaurant-grid">
+
+                <!-- Restaurant 1 -->
+                <article class="restaurant-card">
+
+                    <img src="images/chickenkatsu.jpg" alt="Japanese ramen served in a bowl">
+
+                    <h3>Sakura Kitchen</h3>
+                    <p><strong>Cuisine:</strong> Japanese</p>
+
+                    <p>
+                        Sakura Kitchen offers a variety of Japanese dishes
+                        in a comfortable yet welcoming dining environment
+                        Customers can enjoy freshly prepared ramen, sushi
+                        and rice dishes that is suitable for casual meals
+                        with friends or family. The restaurant aims to provide
+                        a relaxing experience with variety of afforable choices.
+                        It is suitable for those who are interested in exploring
+                        Japenese food.
+                    </p>
+
+                    <!-- Signature Dish Details-->
+                    <p><strong>Signature Dishes:</strong></p>
+
+                    <ul>
+                        <li>Soft Shell Crab - RM15</li>
+                        <li>Chicken Katsu Don - RM20</li>
+                        <li>Niku Ramen - RM25</li>
+                    </ul>
+
+                    <!-- Booking Information -->
+                    <p><strong>Price Per Person:</strong> RM25-50</p>
+                    <p><strong>Reservation Deposit:</strong> RM20</p>
+
+                    <a href="reservation.html?restaurant=sakura" class="button">Reserve Now</a>
+                </article>
+
+                <!-- Restaurant 2 -->
+                <article class="restaurant-card">
+                    
+                    <img src="images/roticanai.jpg" alt="Malaysian nasi lemak with side dishes"> 
+
+                    <h3>Selera Malaysia</h3>
+
+                    <p><strong>Cuisine:</strong> Malaysian</p>
+
+                    <p>
+                        Selera Malaysia introduces customers to a variety
+                        of traditional Malaysia dishes. The menu includes
+                        popular local meals that are suitable for breakfast,
+                        lunch and dinner. With afforable prices and amazing
+                        flavours, the restaurant is a perfect choice for
+                        families, students, or tourist who wants to experience
+                        Malaysian cuisine, It offers casual dining environment
+                        for everyday meals.
+                    </p>
+
+                    <p><strong>Signature Dishes:</strong></p>
+                    <ul>
+                        <li>Nasi Lemak Ayam Rendang - RM15</li>
+                        <li>Char Kuey Teow - RM13</li>
+                        <li>Roti Canai - RM5</li>
+                    </ul>
+
+                    <p><strong>Price Per Person:</strong> RM15-35</p>
+                    <p><strong>Reservation Deposit:</strong> RM10</p>
+
+                    <a href="reservation.html?restaurant=selera" class="button">Reserve Now</a>
+                </article>
+
+                <!-- Restaurant 3 -->
+                <article class="restaurant-card">
+                    
+                    <img src="images/margheritapizza.jpg" alt="Italian pasta served on a plate">
+
+                    <h3>L'Italiano</h3>
+
+                    <p><strong>Cuisine:</strong> Italian</p>
+
+                    <p>
+                        L'Italiano servers Italian-inspired dishes in 
+                        a warm environment setting. Its menu includes
+                        pasta, pizza and other Italian favourites. The 
+                        restaurant is suitable for couples and small
+                        groups looking for exquisite dining experience.
+                        It comes with selection of main courses and 
+                        desserts, L'Italiano provides a convenient option
+                        for both casual dinners and special occasions.
+                    </p>
+
+                    <p><strong>Signature Dishes:</strong></p>
+
+                    <ul>
+                        <li>Margherita Pizza- RM32</li>
+                        <li>Spaghetti Carbonara - RM28</li>
+                        <li>Tiramisu - RM20</li>
+                    </ul>
+
+                    <p><strong>Price Per Person:</strong> RM35-70</p>
+                    <p><strong>Reservation Deposit:</strong> RM30</p>
+
+                    <a href="reservation.html?restaurant=italiano" class="button">Reserve Now</a>
+                </article>
+
+                <!-- Restaurant 4 -->
+                <article class="restaurant-card">
+                    
+                    <img src="images/bulgogi.jpg" alt="Bulgogi served on a bowl"> 
+
+                    <h3>Seoul Harvest</h3>
+
+                    <p><strong>Cuisine:</strong> Korean</p>
+
+                    <p>
+                        Seoul Harvest offers korean-inspired meals for customers
+                        who enjoy sharing food with friends and families. The menu
+                        includes popular dishes such as bulgogi, Tteokbokki, and 
+                        fried chicken. The casual atmosphere makes the dining experience
+                        suitable for group gatherings and relaxed dinner. Customers
+                        can explore variety of food options at a reasonable price.
+                    </p>
+
+                    <p><strong>Signature Dishes:</strong></p>
+
+                    <ul>
+                        <li>Bulgogi - RM20</li>
+                        <li>Korean Fried Chicken - RM28</li>
+                        <li>Tteokbokk - RM15</li>
+                    </ul>
+
+                    <p><strong>Price Per Person:</strong> RM25-50</p>
+                    <p><strong>Reservation Deposit:</strong> RM20</p>
+
+                    <a href="reservation.html?restaurant=seoul" class="button">Reserve Now</a>
+                </article>
+
+                <!-- Restaurant 5 -->
+                <article class="restaurant-card">
+                    
+                    <img src="images/dimsum.jpg" alt="Chinese Dim Sum steamed shrimp dumplings (Har Gow)">
+
+                    <h3>Dim Sum Wok</h3>
+
+                    <p><strong>Cuisine:</strong> Chinese</p>
+
+                    <p>
+                        Dim Sum Wok serves a variety of freshly prepared
+                        dim sum and its signature fried rice. Customers
+                        can enjoy popular dishes such as steamed shrimp
+                        dumplings, siu mai, and wok fried rice. It offers
+                        a comfortable environment for lunch with friends,
+                        or a quick meal. With affordable prices and wide
+                        choices of food, Dim Sum Wok is a great place to
+                        enjoy traditional Chinese food.
+                    </p>
+
+                    <p><strong>Signature Dishes:</strong></p>
+
+                    <ul>
+                        <li>Wok Fried Rice - RM18</li>
+                        <li>Steamed Shrimp Dumplings - RM12</li>
+                        <li>Steamed Siu Mai - RM10</li>
+                    </ul>
+
+                    <p><strong>Price Per Person:</strong> RM20-40</p>
+                    <p><strong>Reservation Deposit:</strong> RM15</p>
+
+                    <a href="reservation.html?restaurant=dimsum" class="button">Reserve Now</a>
+                </article>
+
+                <!-- Restaurant 6 -->
+                <article class="restaurant-card">
+                    
+                    <img src="images/padthai.jpg" alt="Thai food served with rice"> 
+
+                    <h3>The Thai Box </h3>
+
+                    <p><strong>Cuisine:</strong> Thai</p>
+
+                    <p>
+                        The Thai Box is a casual That restaurant offering dishes 
+                        inspired by traditional Thai flavours. Customer can enjoy 
+                        popular food like tom yum soup, pad thai, and basil chicken
+                        rice. The restaurant focuses on serving flavourful food with
+                        a balance of spice and sour taste. The Thai Box is an amazing
+                        choice for students, families, and friends who wants to try
+                        satisfying Thai meal together.
+                    </p>
+
+                    <p><strong>Signature Dishes:</strong></p>
+
+                    <ul>
+                        <li>Tom Yum Seafood Soup - RM22</li>
+                        <li>Pad Thai - RM18</li>
+                        <li>Thai Basil Chicken Rice - RM17</li>
+                    </ul>
+
+                    <p><strong>Price Per Person:</strong> RM20-45</p>
+                    <p><strong>Reservation Deposit:</strong> RM20</p>
+
+                    <a href="reservation.html?restaurant=thai" class="button">Reserve Now</a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 DineFinder. All rights reserved.</p>
+        <p>Restaurant Discovery &amp; Reservation Website</p>
+    </footer>   
+</body>
+</html>

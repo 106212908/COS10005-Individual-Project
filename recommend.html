@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DineFinder | Recommendation</title>
+    <!-- Link CSS and JS File -->
+    <link rel="stylesheet" href="css/style.css">    
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <h1>DineFinder</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="recommend.html" class="active">Recommendations</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Introduction -->
+        <section id="page-intro">
+            <h2>Find Your Perfect Restaurant</h2>
+
+            <p>
+                Not sure where to eat? Find your dining
+                preferences and discover restaurant that
+                suit your needs.
+            </p>
+        </section>
+
+        <!-- Recommendation Form -->
+        <section class="recommendation-section">
+            
+            <h2>Your Dining Preferences</h2>
+
+            <form id="recommendation-form">
+                
+                <!-- Dietary Preferences -->
+                <label for="diet">Dietary Preferences:</label>
+
+                <select id="diet" name="diet" required>
+                    <option value="">Select a preference</option>
+                    <option value="none">No preference</option>
+                    <option value="halal">Halal</option>
+                    <option value="vegetarian">Vegetarian</option>
+                </select>
+
+                <!-- Budget -->
+                <label for="budget">Maximum Budget Per Person:</label>
+
+                <select id="budget" name="budget" required>
+                    <option value="">Select your budget</option>
+                    <option value="low">RM15 - RM30</option>
+                    <option value="medium">RM31 - RM50</option>
+                    <option value="high">Above RM50</option>
+                </select>
+
+                <!-- Dining Purpose -->
+                <label for="purpose">Dining Purpose:</label>
+
+                <select id="purpose" name="purpose" required>
+                    <option value="">Select a purpose</option>
+                    <option value="family">Family Gathering</option>
+                    <option value="date">Date Night</option>
+                    <option value="casual">Casual Dining</option>
+                </select>
+
+                <!-- Find Restaurants Button -->
+                <button type="button" id="findRestaurant">Find Restaurants</button>
+            </form>
+
+            <div id="recommendation-result"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 DineFinder. All rights reserved.</p>
+        <p>Restaurant Discovery &amp; Reservation Website</p>
+    </footer>   
+</body>
+</html>
