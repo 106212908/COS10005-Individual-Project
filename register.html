@@ -35,9 +35,71 @@
                 Fill in your details and get started.
             </p>
         </section>
-        
-    </main>
 
+        <!-- Registration Form -->
+        <section class="registration-section">
+
+            <h2>Registration Form</h2>
+
+            <form id="registration-form" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+
+                <!-- Username -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+
+                <!-- Email Address -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email">
+
+                <!-- Phone -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <!-- Password -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+
+                <!-- Confirm Password -->
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword">
+
+                <!-- Gender -->
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="">Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    <option value="prefer-not">Prefer not to say</option>
+                </select>
+
+                <!-- Dietary Preferences -->
+                <label for="registerDiet">Dietary Preference:</label>
+                <select id="registerDiet" name="registerDiet">
+                    <option value="">Select a preference</option>
+                    <option value="none">No Preferences</option>
+                    <option value="halal">Halal</option>
+                    <option value="vegetarian">Vegetarian</option>
+                </select>
+
+                <!-- Country / Region -->
+                <label for="country">Country/Region:</label>
+                <select id="country" name="country">
+                    <option value="">Select your country</option>
+                    <option value="malaysia">Malaysia</option>
+                    <option value="singapore">Singapore</option>
+                    <option value="indonesia">Indonesia</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <!-- Select Button -->
+                <button type="submit">Register</button>
+
+                <!-- JavaScript Validation Messages -->
+                <p id="registration-message"></p>
+            </form>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
