@@ -292,19 +292,73 @@ footer p {
     background-color: #294b37;
 }
 
+/* Registration Section Styling */
+.registration-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+}
 
+.registration-section h2 {
+    color: #294b37;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
 
+/* Registration Form Styling */
+#registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #e7eadd;
+    padding: 20px;
+    border-radius: 10px;
+}
 
+/* Labels */
+#registration-form label {
+    font-weight: bold;
+    color: #333333;
+    font-size: 18px;
+}
 
+/* Text Fields and Dropdowns */
+#registration-form input, 
+#registration-form select {
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    font-size: 14px;    
+}
 
+/* Register Button */
+#registration-form button {
+    padding: 12px;
+    background-color: #365c45;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
 
+#registration-form button:hover {
+    background-color: #294b37;
+}
 
+/* Registration Validation Message Styling */
+#registration-message {
+    margin: 0;
+    line-height: 1.6;
+    white-space: pre-line; /* Preserve newlines for error message */
+}
 
-
-
-
-
-
+#registration-message:empty {
+    display: none;
+}
 
 /* Tablet layout */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -383,6 +437,15 @@ footer p {
     }
 
     .recommendation-card {
+        padding: 15px;
+    }
+
+   .registration-section {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    #registration-form {
         padding: 15px;
     }
 }
