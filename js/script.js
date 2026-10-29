@@ -106,13 +106,87 @@ function recommendRestaurant () {
     document.getElementById("recommendation-result").innerHTML = result;
 }   
 
+function validateRegistration() {
+
+    var username = document.getElementById("username").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var phone = document.getElementById("phone").value.trim();
+    var password = document.getElementById("password").value;
+    var confirmedPassword = document.getElementById("confirmPassword").value;
+    var gender = document.getElementById("gender").value;
+    var diet = document.getElementById("registerDiet").value;
+    var country = document.getElementById("country").value;
+
+    var errors = "";
+
+    // Validation 1 - Username
+    if (!/^[A-Za-z0-9_]{5,}$/.test(username)) {
+        errors += "Username must contain at least 5 characters using only letters, numbers or underscores.\n";
+    }
+
+    // Validation 2 - Email Format
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errors += "Please enter a valid email address.\n";
+    }
+
+    // Validation 3 - Phone Number
+    if (!/^[0-9]{8,15}$/.test(phone)){
+        errors += "Phone numbers must contain between 8 to 15 digits.\n";
+    }
+
+    // Validation 4 - Password
+    // At least 10 characters, include uppercase, lowercase, numbers, and special characters
+    if (password.length < 10 || !/[A-Z]/.test(password) || !/[a-z]/.test(password) || !/[0-9]/.test(password) || !/[^A-Za-z0-9]/.test(password)){
+        errors += "Password must contain at least 10 characters, including uppercase, lowercase, numbers, and special characters.\n";
+    }
+
+    // Validation 5 - Confirm Password
+    if (confirmedPassword == "" || password != confirmedPassword) {
+        errors += "Confirmed password must match your password.\n";
+    }
+
+    // Validation 6 - Gender
+    if (gender == ""){
+        errors += "Please select your gender.\n";
+    }
+
+    // Validation 7 - Dietary Preferences
+    if (diet == ""){
+        errors += "Please select your dietary preferences.\n";
+    }
+
+    if (country == ""){
+        errors += "Please select your country.\n";
+    }
+
+    // Creates a alert of error messages and false rejects form submission
+    if (errors !== ""){
+        alert(errors);
+        return false;  
+    }
+    else{
+        // Creates a "Registration Successful! alert when the form submission is successful
+        alert("Registration Successful!");
+        return true;
+    }
+}
+
 function init () {
 
+    // For Recommendation Page
     var button = document.getElementById("findRestaurant");
 
-    // Checks whether the button exists on the current page
+    // Runs recommendRestaurant after the button is clicked 
     if (button != null){
         button.onclick = recommendRestaurant;
+    }
+
+    // For Registration Page
+    var registrationForm = document.getElementById("registration-form");
+
+    // Runs validateRegistration when form is submitted 
+    if (registrationForm != null) {
+        registrationForm.onsubmit = validateRegistration;
     }
 }
 
