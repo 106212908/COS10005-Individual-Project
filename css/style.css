@@ -350,17 +350,6 @@ footer p {
     background-color: #294b37;
 }
 
-/* Registration Validation Message Styling */
-#registration-message {
-    margin: 0;
-    line-height: 1.6;
-    white-space: pre-line; /* Preserve newlines for error message */
-}
-
-#registration-message:empty {
-    display: none;
-}
-
 /* Tablet layout */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     header {
