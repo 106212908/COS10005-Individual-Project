@@ -24,6 +24,116 @@
         </nav>
     </header>
 
+    <!-- Main Content -->
+    <main>
+        <!-- Page Introduction -->
+        <section id="page-intro">
+            <h2>Reserve Your Table</h2>
+            <p>
+                Choose your preferred restaurant and<br>
+                fill in your details below to make your
+                reservation today.
+            </p>
+        </section>
+
+        <!-- Reservation Form -->
+        <section id="reservation-section">
+            
+            <h2>Reservation Details</h2>
+
+            <form id="reservation-form" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" novalidate>
+
+                <!-- Customer Information -->
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName">
+
+                <label for="reservationEmail">Email Address:</label>
+                <input type="text" id="reservationEmail" name="reservationEmail">
+
+                <label for="reservationPhone">Phone Number:</label>
+                <input type="text" id="reservationPhone" name="reservationPhone">
+
+                <!-- Restaurant Selection -->
+                <label for="restaurant">Restaurant:</label>
+
+                <select id="restaurant" name="restaurant">
+                    <option value="">Select a restaurant</option>
+                    <option value="sakura">Sakura Kitchen</option>
+                    <option value="selera">Selera Malaysia</option>
+                    <option value="italiano">L'Italiano</option>
+                    <option value="seoul">Seoul Harvest</option>
+                    <option value="dimsum">Dim Sum Wok</option>
+                    <option value="thai">The Thai Box</option>
+                </select>
+
+                <!-- Reservation Date and Time -->
+                <label for="reservationDate">Reservation Date:</label>
+                <input type="date" id="reservationDate" name="reservationDate">
+
+                <label for="reservationTime">Reservation Time:</label>
+                <input type="time" id="reservationTime" name="reservationTime">
+
+                <label for="people">Number of People:</label>
+                <input type="number" id="people" name="people" min="1">
+
+                <!-- Optional Requests -->
+                <label for="requests">Special Requests (Optional):</label>
+                <textarea id="requests" name="requests" rows="4"></textarea>
+
+                <!-- Deposit -->
+                <label for="deposit">Reservation Deposit (RM):</label>
+                <input type="text" id="deposit" name="deposit" readonly>
+
+                <!-- Payment Method-->
+                <label for="paymentMethod">Deposit Method:</label>
+
+                <select id="paymentMethod" name="paymentMethod">
+                    <option value="">Select a payment method</option>
+                    <option value="voucher">Voucher</option>
+                    <option value="online">Online Payment</option>
+                </select>
+
+                <!-- Voucher Fields -->
+                <div id="voucher-section">
+                    <label for="voucherCode">Voucher Code (12 digits):</label>
+                    <input type="text" id="voucherCode" name="voucherCode" maxlength="12">
+                </div>
+
+                <!-- Online Payment Fields -->
+                <div id="online-section">
+                    
+                    <label for="cardType">Card Type:</label>
+                    <select id="cardType" name="cardType">
+                        <option value="">Select card type</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Mastercard</option>
+                        <option value="amex">American Express</option>
+                    </select>
+
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber">
+
+                    <p>
+                        For testing purposes only. Do not enter
+                        real credit card information.
+                    </p>
+                </div>
+
+                <!-- Billing Email -->
+                <label for="billingEmail">Billing Email Address:</label>
+
+                <div class="billing-option">
+                    <input type="checkbox" id="sameEmail" name="sameEmail" value="yes">
+                    <label for="sameEmail">Same as email address</label>
+                </div>
+
+                <input type="email" id="billingEmail" name="billingEmail">
+
+                <button type="submit">Submit Reservation</button>
+            </form>
+        </section>
+    </main>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 DineFinder. All Right Reserved</p>
