@@ -350,6 +350,95 @@ footer p {
     background-color: #294b37;
 }
 
+/* Reservation Page Styling */
+.reservation-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.reservation-section h2 {
+    text-align: center;
+    color: #294b37;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+/* Reservation Form Styling */
+#reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #e7eadd;
+    border-radius: 10px;
+}
+
+/* Labels Styling */
+#reservation-form label {
+    font-weight: bold;
+    color: #333333;
+    font-size: 18px;
+}
+
+#reservation-form input,
+#reservation-form select,
+#reservation-form textarea {
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#reservation-form #deposit {
+    background-color: #eeeeee;
+}
+
+/* Conditional Payment Fields Based Filter */
+#voucher-section,
+#online-section {
+    display: none;
+}
+
+#voucher-section label,
+#online-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#online-section select {
+    margin-bottom: 15px;
+}
+
+#online-section p {
+    font-size: 14px;
+    color: #555555;
+}
+
+/* Billing Email Checkbox Styling*/
+.billing-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#reservation-form button {
+    padding: 12px;
+    background-color: #365c45;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#reservation-form button:hover {
+    background-color: #294b37;
+}
+
+
 /* Tablet layout */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     header {
