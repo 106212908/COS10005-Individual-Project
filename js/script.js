@@ -171,6 +171,62 @@ function validateRegistration() {
     }
 }
 
+
+function setupReservationForm() {
+
+    var reservationForm = document.getElementById("reservation-form");
+
+    if (reservationForm == null){
+        return;
+    }
+
+    var restaurant = document.getElementById("restaurant");
+    var payment = document.getElementById("paymentMethod");
+    var sameEmail = document.getElementById("sameEmail");
+    var email = document.getElementById("reservationEmail");
+
+    // Get URL parameters 
+    var params = new URLSearchParams(window.location.search);
+
+    // Get restaurant ID from URL 
+    var selectedRestaurant = params.get("restaurant");
+
+    // Selects restaurant from URL
+    if (selectedRestaurant != null){
+        restaurant.value = selectedRestaurant;
+
+        // Resets if restaurant is invalid
+        if (restaurant.selectedIndex == -1){
+            restaurant.value = "";
+        }
+    }
+    
+    // Set initial restaurant deposit
+    updateDeposit();
+
+    // Hides both voucher and credit card payment sections initially
+    updatePayment();
+
+    // Update deposit when the restaurant changes
+    restaurant.onchange = updateDeposit;
+
+    // Show the selected payment fields
+    payment.onchange = updatePayment;
+
+    // Copy billing email when the checkbox changes
+    sameEmail.onchange = updateBillingEmail;
+
+    email.oninput = function() {
+
+        if (sameEmail.checked) {
+            updateBillingEmail();
+        }
+    }
+
+    // Validate form before submission
+    reservationForm.onsubmit = validateReservation;
+}
+
 function init () {
 
     // For Recommendation Page
@@ -188,6 +244,9 @@ function init () {
     if (registrationForm != null) {
         registrationForm.onsubmit = validateRegistration;
     }
+
+    // For Reservation Page
+    setupReservationForm();
 }
 
 // Runs the init function once the webpage finishes loading
