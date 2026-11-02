@@ -2,7 +2,6 @@
 "use strict";
 
 // JavaScript logic codes for recommend.html 
-
 // Creates a restaurant card using six arguments
 function restaurantCard(name, cuisine, price, id, maxPrice, maxBudget) {
     
@@ -106,6 +105,7 @@ function recommendRestaurant () {
     document.getElementById("recommendation-result").innerHTML = result;
 }   
 
+// Javascript logic codes for reservation.html
 function validateRegistration() {
 
     var username = document.getElementById("username").value.trim();
