@@ -200,6 +200,41 @@ function updateDeposit() {
     }
 }
 
+function updatePayment() {
+
+    var method = document.getElementById("paymentMethod").value;
+
+    var voucher = document.getElementById("voucher-section");
+    var online = document.getElementById("online-section");
+
+    var voucherCode = document.getElementById("voucherCode");
+    var cardType = document.getElementById("cardType");
+    var cardNumber = document.getElementById("cardNumber");
+
+    // Hides both payment sections
+    voucher.style.display = "none";
+    online.style.display = "none";
+
+    // Disables the hidden fields so that they are not submitted
+    voucherCode.disabled = true;
+    cardType.disabled = true;
+    cardNumber.disabled = true;
+
+    if (method == "voucher") {
+
+        // Displays the voucher field
+        voucher.style.display = "block";
+        voucherCode.disabled = false;
+    }
+    else if (method == "online") {
+
+        // Displays the online payment fields
+        online.style.display = "block";
+        cardType.disabled = false;
+        cardNumber.disabled = false;
+    }
+}
+
 function setupReservationForm() {
 
     var reservationForm = document.getElementById("reservation-form");
