@@ -171,6 +171,34 @@ function validateRegistration() {
     }
 }
 
+// Updates deposit based on the restaurant selected
+function updateDeposit() {
+
+    var restaurant = document.getElementById("restaurant").value;
+    var deposit = document.getElementById("deposit");
+
+    if (restaurant == "sakura"){
+        deposit.value = 20;
+    }
+    else if (restaurant == "selera"){
+        deposit.value = 10;
+    }
+    else if (restaurant == "italiano"){
+        deposit.value = 30;
+    }
+    else if (restaurant == "seoul"){
+        deposit.value = 25;
+    }
+    else if (restaurant == "dimsum"){
+        deposit.value = 15;
+    }
+    else if (restaurant == "thai"){
+        deposit.value = 20;
+    }
+    else {
+        deposit.value = "";
+    }
+}
 
 function setupReservationForm() {
 
