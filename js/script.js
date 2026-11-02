@@ -235,6 +235,23 @@ function updatePayment() {
     }
 }
 
+function updateBillingEmail() {
+
+    var sameEmail = document.getElementById("sameEmail");
+    var email = document.getElementById("reservationEmail");
+    var billing = document.getElementById("billingEmail");
+
+    if (sameEmail.checked){
+        
+        // Lock billing email field
+        billing.readOnly = true;
+        billing.value = email.value;
+    } else {
+        // Alows billing email field editable
+        billing.readOnly = false;
+    }
+}
+
 function setupReservationForm() {
 
     var reservationForm = document.getElementById("reservation-form");
