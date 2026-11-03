@@ -252,6 +252,104 @@ function updateBillingEmail() {
     }
 }
 
+function validateReservation() {
+
+    var fullName = document.getElementById("fullName").value.trim();
+    var email = document.getElementById("reservationEmail").value.trim();
+    var phone = document.getElementById("reservationPhone").value.trim();
+    var restaurant = document.getElementById("restaurant").value;
+    var date = document.getElementById("reservationDate").value;
+    var time = document.getElementById("reservationTime").value;
+    var people = document.getElementById("people").value;
+    var payment = document.getElementById("paymentMethod").value;
+    var billing = document.getElementById("billingEmail").value.trim();
+
+    var errors = "";
+
+    // Validation 1 - Full Name
+    if (fullName == "") {
+        errors += "Please enter your full name.\n";
+    }
+
+    // Validation 2 - Email Format
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errors += "Please enter a valid email address.\n";
+    }
+
+    // Validation 3 - Phone Number
+    if (!/^[0-9]{10,}$/.test(phone)) {
+        errors += "Phone number must contain at least 10 digits.\n";
+    }
+
+    // Validation 4 - Restaurant Selection
+    if (restaurant == "") {
+        errors += "Please select a restaurant.\n";
+    }
+
+    // Validation 5 - Reservation Date and Time
+    if (date == "" || time == "") {
+        errors += "Please select a reservation date and time.\n";
+    } else {
+
+        var reservationDateTime = new Date(date + "T" + time);
+        var currentDateTime = new Date();
+
+        if (isNaN(reservationDateTime.getTime()) || currentDateTime >= reservationDateTime) {
+            errors += "Reservation date and time must be in the future.\n";
+        }
+    }
+
+    // Validation 6 - Number of People
+    if (people == "" || !Number.isInteger(Number(people)) || Number(people) <= 0) {
+        errors += "Number of people must be a positive whole number.\n";
+    }
+
+    // Validation 7 - Payment Method
+
+    if (payment == "") {
+        errors += "Please select a payment method.\n";
+    }
+
+    // Validation 8 - Online Payment
+
+    if (payment == "online") {
+        var cardType = document.getElementById("cardType").value;
+        var cardNumber = document.getElementById("cardNumber").value.trim();
+
+        if (cardType == "") {
+            errors += "Please select a card type.\n";
+        }
+
+
+        if (cardType == "visa" || cardType == "mastercard") {
+            
+            if (!/^[0-9]{16}$/.test(cardNumber)) {
+                errors += "Visa and Mastercard must contain exactly 16 digits.\n";
+            }
+        }
+        else if (cardType == "amex") {
+
+            if (!/^[0-9]{15}$/.test(cardNumber)) {
+                errors += "Amex must contain exactly 15 digits.\n";
+            }
+        }
+    }
+    
+        // Validation 9 - Billing Email
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(billing)) {
+            errors += "Please enter a valid billing email address.\n";
+        }
+    
+
+    if (errors !== "") {
+        alert(errors);
+        return false;
+    } else {
+        alert("Reservation form submitted successfully!");
+        return true;
+    }
+}
+
 function setupReservationForm() {
 
     var reservationForm = document.getElementById("reservation-form");
