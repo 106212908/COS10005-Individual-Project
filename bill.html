@@ -44,8 +44,6 @@
             <h2>Calculate Your Bill</h2>
 
             <!-- Restaurant Selection -->
-            <div class="bill-field">
-
                 <label for="billRestaurant">Select Restaurant:</label>
 
                 <select id="billRestaurant" name="billRestaurant">
@@ -57,72 +55,16 @@
                     <option value="dimsum">Dim Sum Wok</option>
                     <option value="thai">The Thai Box</option>
                 </select>
-            </div>
 
             <!-- Number of People -->
-            <div class="bill-field">
-
-                <label for="billPeople">Number of People:</label>
-
-                <input type="text" id="billPeople" name="billPeople" min="1" placeholder="Enter number of people">
+            <label for="billPeople">Number of People:</label>
+            <input type="text" id="billPeople" name="billPeople" min="1" placeholder="Enter number of people">
             
-            </div>
-
             <!-- Calculate Bill Button -->
             <button type="button" id="calculateBillButton">Calculate Estimated Bill</button>
 
-            <!-- Input Message -->
-            <p id="bill-message">
-                Select a restaurant and enter then number of peopl to calculate your estimated bill
-            </p>
-
             <!-- Estimated Bill Preview-->
-            <div id="bill-result">
-
-                <h3>Estimated Bill Preview</h3>
-
-                <p>
-                    <strong>Restaurant:</strong>
-                    <span id="resultRestaurant"></span>
-                </p>
-
-                <p>
-                    <strong>Price Per Person:</strong>
-                    <span id="billPrice"></span>
-                </p>
-
-                <p>
-                    <strong>Number of People:</strong>
-                    <span id="billPeople"></span>
-                </p>
-
-                <p>
-                    <strong>Minimum Estimated Cost:</strong>
-                    <span id="billMinimum"></span>
-                </p>
-
-                <p>
-                    <strong>Maximum Estimated Cost:</strong>
-                    <span id="maximumBill"></span>
-                </p>
-
-                <!-- Final Estimated Bill -->
-                <div class="bill-total">
-
-                    <h3>Estimated Total Bill</h3>
-
-                    <p id="estimatedTotal"></p>
-
-                </div>
-            </div>
-
-            <!-- Disclaimer -->
-            <p id="bill-note">
-                This is just an estimated dining cost which is based
-                on the restaurant average price per range per person.
-                Actual spending may vary depending on the dishes ordered.
-                Reservation deposits are excluded as an extra charge.
-            </p>
+            <div id="bill-result"></div>
         </section>
     </main>
 
