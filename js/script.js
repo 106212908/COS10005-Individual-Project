@@ -405,6 +405,100 @@ function setupReservationForm() {
     reservationForm.onsubmit = validateReservation;
 }
 
+// Creates a estimated bill Card 
+function billCard(name, minPrice, maxPrice, people) {
+
+    var minTotal = minPrice * people;
+    var maxTotal = maxPrice * people;
+
+    var card = "<div class='bill-card'>";
+
+    card += "<h3>Estimated Bill Preview</h3>";
+    card += "<p><strong>Restaurant:</strong> " + name + "</p>";
+    card += "<p><strong>Price Per Person:</strong> RM" + minPrice + " - RM" + maxPrice + "</p>";
+    card += "<p><strong>Number of People:</strong> " + people  + "</p>";
+    card += "<p><strong>Minimum Estimated Cost:</strong> RM" + minTotal + "</p>";
+    card += "<p><strong>Maximum Estimated Cost:</strong> RM" + maxTotal + "</p>";
+
+    card += "<p class='bill-total'>Estimated Total: RM" + minTotal + " - RM" + maxTotal + "</p>";
+    card += "</div>";
+
+    return card;
+}
+
+// Calculate estimated restaurant bill
+function calculateBill() {
+
+    var restaurant = document.getElementById("billRestaurant").value;
+    var people = document.getElementById("billPeople").value;
+
+    var name = "";
+    var minPrice = 0;
+    var maxPrice = 0;
+
+    if (restaurant == "" || people == "") {
+        alert("Please select a restaurant and enter the number of people.");
+        return;
+    }
+
+    if (!Number.isInteger(Number(people)) || Number(people) <= 0) {
+        alert("Number of people must be a positive whole number.");
+        return;
+    }
+
+    // Restaurant Range Prices
+    if (restaurant == "sakura") {
+        name = "Sakura Kitchen";
+        minPrice = 25;
+        maxPrice = 50;
+    }
+    else if (restaurant == "selera") {
+        name = "Selera Malaysia";
+        minPrice = 15;
+        maxPrice = 35;
+    }
+    else if (restaurant == "italiano") {
+        name = "L'Italiano";
+        minPrice = 35;
+        maxPrice = 70;
+    }
+    else if (restaurant == "seoul") {
+        name = "Seoul Harvest";
+        minPrice = 25;
+        maxPrice = 50;
+    }
+    else if (restaurant == "dimsum") {
+        name = "Dim Sum Wok";
+        minPrice = 20;
+        maxPrice = 40;
+    }
+    else if (restaurant == "thai") {
+        name = "The Thai Box";
+        minPrice = 20;
+        maxPrice = 45;
+    }
+    else {
+        alert("Please select a valid restaurant.");
+        return;
+    }
+
+    // Display the estimated bill card
+    document.getElementById("bill-result").innerHTML = billCard(name, minPrice, maxPrice, Number(people));
+}
+
+// Set up Estimate Bill Calculator
+function setupBillPage() {
+
+    var button = document.getElementById("calculateBillButton");
+
+    if (button == null){
+        return;
+    }
+
+    // Calculate when button is pressed
+    button.onclick = calculateBill;
+}
+
 function init () {
 
     // For Recommendation Page
@@ -425,6 +519,9 @@ function init () {
 
     // For Reservation Page
     setupReservationForm();
+
+    // Estimate Bill
+    setupBillPage();
 }
 
 // Runs the init function once the webpage finishes loading
