@@ -500,6 +500,32 @@ footer p {
     margin-top: 20px;
 }
 
+.bill-card {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.bill-card h3 {
+    color: #294b37;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.bill-card p {
+    margin: 10px 0;
+}
+
+.bill-total {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #cccccc;
+    font-size: 18px;
+    font-weight: bold;
+    color: #294b37;
+}
+
 /* Tablet layout */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     header {
@@ -520,7 +546,6 @@ footer p {
         gap: 25px;
     }
 }
-
 
 /* Mobile layout */
 @media screen and (max-width: 767px) {
