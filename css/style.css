@@ -476,11 +476,9 @@ footer p {
     border: 1px solid #aaaaaa;
     border-radius: 5px;
     font-size: 14px;
-    margin-bottom: 15px;
 }
 
-#calculateBillButton {
-    width: 100%;
+#bill-form button {
     padding: 12px;
     background-color: #365c45;
     color: white;
@@ -489,6 +487,10 @@ footer p {
     font-size: 14px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+#bill-form button:hover {
+    background-color: #294b37;
 }
 
 .bill-note {
