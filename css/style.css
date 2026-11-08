@@ -48,11 +48,10 @@ nav a:hover {
     color: #365c45;
 }
 
-nav a.active:hover {
+nav a.active {
     color: #365c45;
     text-decoration: underline;
 }
-
 
 /* Page Intro Styling */
 #page-intro {
