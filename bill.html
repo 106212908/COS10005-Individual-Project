@@ -40,31 +40,41 @@
 
         <!-- Estimate Bill Calculator -->
         <section class="bill-section">
+            <form id="bill-form">
+                <h2>Calculate Your Bill</h2>
 
-            <h2>Calculate Your Bill</h2>
+                <!-- Restaurant Selection -->
+                    <label for="billRestaurant">Select Restaurant:</label>
 
-            <!-- Restaurant Selection -->
-                <label for="billRestaurant">Select Restaurant:</label>
+                    <select id="billRestaurant" name="billRestaurant">
+                        <option value="">Select a restaurant</option>
+                        <option value="sakura">Sakura Kitchen</option>
+                        <option value="selera">Selera Malaysia</option>
+                        <option value="italiano">L'Italiano</option>
+                        <option value="seoul">Seoul Harvest</option>
+                        <option value="dimsum">Dim Sum Wok</option>
+                        <option value="thai">The Thai Box</option>
+                    </select>
 
-                <select id="billRestaurant" name="billRestaurant">
-                    <option value="">Select a restaurant</option>
-                    <option value="sakura">Sakura Kitchen</option>
-                    <option value="selera">Selera Malaysia</option>
-                    <option value="italiano">L'Italiano</option>
-                    <option value="seoul">Seoul Harvest</option>
-                    <option value="dimsum">Dim Sum Wok</option>
-                    <option value="thai">The Thai Box</option>
-                </select>
+                <!-- Number of People -->
+                <label for="billPeople">Number of People:</label>
+                <input type="text" id="billPeople" name="billPeople" min="1" placeholder="Enter number of people">
+                
+                <!-- Calculate Bill Button -->
+                <button type="button" id="calculateBillButton">Calculate Estimated Bill</button>
 
-            <!-- Number of People -->
-            <label for="billPeople">Number of People:</label>
-            <input type="text" id="billPeople" name="billPeople" min="1" placeholder="Enter number of people">
-            
-            <!-- Calculate Bill Button -->
-            <button type="button" id="calculateBillButton">Calculate Estimated Bill</button>
+                <!-- Estimated Bill Preview-->
+                <div id="bill-result"></div>
+            </form>
 
-            <!-- Estimated Bill Preview-->
-            <div id="bill-result"></div>
+            <!-- Disclaimer -->
+            <p class="bill-note">
+                This is only an estimated dining cost based on the
+                restaurant's average price range per person.<br>
+                Actual spending may vary depending on the dishes ordered.
+                Reservation deposits are not included as an extra charge.
+            </p>
+
         </section>
     </main>
 
