@@ -1,4 +1,70 @@
-References
+DineFinder - Restaurant Discovery & Reservation Website
+
+1. How to Access the Website
+
+1. Download the submitted ZIP file.
+2. Right-click the ZIP file and select the "Extract All" to unzip the files.
+3. Open the extracted project folder
+4. Navigate the index.html file and double-click it to open the website in your browser.
+5. Use the navigation menu to access different pages like Restaurants, Recommendations, Register, Reservation, and Estimated Bill.
+
+No additional software is required to run the website. Please keep the original folder structure unchange to ensure content is loaded correctly.
+
+2. Website Structure
+DineFinder consists of six different pages:
+
+- index.html - The homepage which introduces DineFinder and the services offered.
+- restaurants.html - Displays six different restaurants with their respective description, signature dishes, prices, and reservation deposits.
+- recommend.html - Recommends different restaurants based on the user's dietary preferences, budget, as well as dining purpose.
+- register.html - Contains a registration form with custom JavaScript validation.
+- reservation.html - Allows the users to select restaurant, enter their reservation details, and select a payment method.
+- bill.html - An Estimated Bill Calculator that calculates the estimated dining costs based on the restaurant's price range and the number of people.
+
+The CSS folder contains style.css, which handles the website design and the responsive layouts. Furthermore, the js folder contains script.js, which handles
+the JavaScript functionality and validation. The images folder contains images used inside the website.
+
+3. GitHub Repository Link: https://github.com/106212908/COS10005-Individual-Project.git
+
+4. JavaScript Validation Logic
+
+Registration Form Validation
+
+The registration form checks whether all required fields are completed correctly. The username must contain at least five characters using letters, numbers or underscores.
+The email address must follow a valid format, meanwhile the phone number must contain between 8 to 15 digits.
+
+The password must contain at least 10 characters, which includes uppercase, lowercase, numbers, and special characters. The confirmed password must match with the original
+password. The gender, dietary preferences, and country must be selected and cannot be empty.
+
+So, if any information is invalid. JavaScript displays an alert which contains the error message and prevents the form from being submitted.
+
+Reservation Form Validation
+
+The reservation forms checks whether the required fields are completed correctly. It includes the customer's full name, email address, phone number, selected restaurant,
+reservation date and time, number of people, and the payment method.
+
+The phone number must contain at least 10 digits, the reservation date and time must not be in the past, and the number of people must be greater than 0
+
+When the Voucher option is selected, a voucher code field is present as textbox without additional validation. When the Online Payment option is selected, JavaScript validation
+checks the credit card number based on the selected card type, so for Visa and Mastercard requires 16 digits, while Amex requires 15 digits.
+
+So, if any information is invalid. JavaScript displays an alert which contains the error message and prevents the form from being submitted.
+
+Restaurant Recommendations and Estimated Bill Calculator
+
+The recommendation page uses JavaScript condition to display the restaurant that match the user's dietary preferences, budget, and dining purpose.
+
+The Estimated Bill Calculator calculates the minimum adn maximum estimated dining cost by multiplying the restaurant's price per range per person by the number of people. Then,
+JavaScript generates a bill card showing the estimated cost, which can be dynamically updated when the selection changes.
+
+5. Known Issues and Limitations
+
+- The registration form does not create or store actual user accounts.
+- The Online payment only checks for the credit card number format, and no actual payment is processed.
+- The Estimated Bill Calculator provides an approximate price range. The actual dining might differ depending on dishes ordered.
+- The system checks restaurant starting prices, not the price of each individual dish. Therefore, some menu options may exceed the selected budget.
+
+6. References
+These are the sources used for the images displayed on the website.
 
 bulgogi.jpg
 
@@ -27,61 +93,3 @@ Omura, Y. (2026) *Chicken katsudon*. Sudachi, 31 July. Available at: https://sud
 margheritapizza.jpg
 
 Danzante Wines (n.d.) *Margherita pizza*. Available at: https://www.danzantewines.com/recipes/margherita-pizza/ (Accessed: 25 October 2026).
-
-
-RESTAURANT RECOMMENDATION RULES
-
-1. Dietary Preference
-
-- No Preference: All restaurants can be considered.
-- Halal: Only restaurants defined as offering halal-suitable options are considered.
-- Vegetarian: Only restaurants defined as offering vegetarian options are considered.
-
-The dietary categories are based on the sample restaurant profiles used in this project.
-
-2. Budget Per Person
-
-The user's selected budget is treated as the maximum amount they are willing to spend.
-
-- Up to RM30: Restaurants with a starting price of RM30 or below are considered.
-- Up to RM50: Restaurants with a starting price of RM50 or below are considered.
-- No Specific Limit (RM50+): Restaurants are not excluded based on price.
-
-If a restaurant's maximum advertised price exceeds the user's selected budget, a note is displayed to inform the user that some menu options may cost more than their budget.
-
-3. Dining Purpose
-
-Each restaurant is assigned suitable dining purposes based on its sample dining profile.
-
-- Sakura Kitchen: Family Gathering, Date Night, Casual Dining
-- Selera Malaysia: Family Gathering, Casual Dining (Halal options)
-- L'Italiano: Family Gathering, Date Night (Vegetarian options)
-- Seoul Harvest: Family Gathering, Date Night
-- Dim Sum Wok: Family Gathering, Casual Dining
-- The Thai Box: Family Gathering, Casual Dining (Vegetarian options)
-
-4. Recommendation Matching
-
-A restaurant is recommended only when all three conditions are met:
-
-- It supports the selected dietary preference.
-- Its starting price is within the user's maximum budget, or the user has no spending limit.
-- It matches the selected dining purpose.
-
-If multiple restaurants satisfy these conditions, all matching restaurants are displayed.
-
-If no restaurants match, the user is asked to change their preferences.
-
-5. Reservation Navigation
-
-Each recommended restaurant includes a Reserve Now link that directs the user to the reservation page.
-
-The selected restaurant is included in the URL so the reservation page can identify the restaurant and preselect it once the corresponding reservation JavaScript is implemented.
-
-6. Limitations
-
-The recommendation system uses predefined rules rather than real-time restaurant information. Prices and dining categories are sample data for this academic project.
-
-The system checks restaurant starting prices, not the price of each individual dish. Therefore, some menu options may exceed the selected budget.
-
-Dietary options are also defined in the project data and do not represent independently verified dietary or halal certification.
