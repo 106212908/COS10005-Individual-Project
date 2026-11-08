@@ -187,7 +187,7 @@ function updateDeposit() {
         deposit.value = 30;
     }
     else if (restaurant == "seoul"){
-        deposit.value = 25;
+        deposit.value = 20;
     }
     else if (restaurant == "dimsum"){
         deposit.value = 15;
@@ -345,7 +345,7 @@ function validateReservation() {
         alert(errors);
         return false;
     } else {
-        alert("Reservation form submitted successfully!");
+        alert("Reservation validation successful!");
         return true;
     }
 }
@@ -431,6 +431,9 @@ function calculateBill() {
 
     var restaurant = document.getElementById("billRestaurant").value;
     var people = document.getElementById("billPeople").value;
+
+    // Clear the previous estimated bill
+    document.getElementById("bill-result").innerHTML = "";
 
     var name = "";
     var minPrice = 0;
