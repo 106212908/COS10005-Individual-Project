@@ -438,6 +438,65 @@ footer p {
     background-color: #294b37;
 }
 
+/* Bill Page Styling */
+.bill-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bill-section h2 {
+    text-align: center;
+    color: #294b37;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+#bill-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #e7eadd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bill-section label {
+    font-weight: bold;
+    color: #333333;
+    font-size: 18px;
+}
+
+.bill-section input,
+.bill-section select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#calculateBillButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #365c45;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.bill-note {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 20px;
+}
 
 /* Tablet layout */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -534,6 +593,15 @@ footer p {
     }
 
     #reservation-form {
+        padding: 15px;
+    }
+
+    .bill-section {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    #bill-form {
         padding: 15px;
     }
 }
